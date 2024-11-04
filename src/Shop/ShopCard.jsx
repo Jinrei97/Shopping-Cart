@@ -10,7 +10,7 @@ export default function ShopCard({ product, addToCart }) {
 
     const submitToCart = () => {
         if (count > 0) {
-            addToCart(count);
+            addToCart(product.id, count);
             setCount(0);
         }
     }
