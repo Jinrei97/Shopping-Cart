@@ -1,9 +1,29 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Link } from "react-router-dom";
 import NavHeader from "../NavHeader/NavHeader"
 
 export default function Shop() {
     const [shopCounter, setShopCounter] = useState(0);
+    const [products, setProducts] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchFakeData = async () => {
+            try {
+            const data = await ((await fetch('https://fakestoreapi.com/products')).json())
+            setProducts(data);
+            setError(null);
+            } catch (err) {
+                setError(err);
+                console.log(err);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchFakeData();
+    }, [])
 
     return (
         <div>
@@ -15,7 +35,13 @@ export default function Shop() {
                     >Checkout
                 </Link>
             </NavHeader>
-            <p>test shop</p>
+
+            {Array.isArray(products) && 
+                products.map((product) => {
+                    return <div key={product.id}>{product.title}</div>
+                })}
+            {loading && <p>Loading shop data</p>}
+            {error && <p>The following error has occurred {error}</p>}
         </div>
     )
 }
