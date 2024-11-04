@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom";
 import NavHeader from "../NavHeader/NavHeader"
+import ShopCard from "./ShopCard";
 
 export default function Shop() {
     const [shopCounter, setShopCounter] = useState(0);
@@ -38,7 +39,13 @@ export default function Shop() {
 
             {Array.isArray(products) && 
                 products.map((product) => {
-                    return <div key={product.id}>{product.title}</div>
+                    return (
+                        <ShopCard 
+                            key={product.id} 
+                            product={product}
+                            addToCart={(count) => setShopCounter((n) => n + count)} 
+                        />
+                    )
                 })}
             {loading && <p>Loading shop data</p>}
             {error && <p>The following error has occurred {error}</p>}
