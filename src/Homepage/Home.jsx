@@ -9,7 +9,7 @@ export default function Homepage() {
         <div className={classes.home}>
             <NavHeader />
             <img src={homepageImg} alt="" />
-            <p>test homepage</p>
+            <p>Shopping cart - React toy project</p>
         </div>
     )
 }

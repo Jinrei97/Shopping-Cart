@@ -5,6 +5,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Homepage from './Homepage/Home.jsx'
 import Shop from './Shop/Shop.jsx'
+import Checkout from './Checkout/Checkout.jsx'
 
 const router = createBrowserRouter([
   {
@@ -12,8 +13,12 @@ const router = createBrowserRouter([
     element: <Homepage />,
   },
   {
-    path: 'shop',
+    path: '/shop',
     element: <Shop />,
+  },
+  {
+    path: '/shop/checkout',
+    element: <Checkout />,
   },
 ])
 
