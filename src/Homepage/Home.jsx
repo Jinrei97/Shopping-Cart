@@ -6,7 +6,7 @@ import classes from './home.module.css';
 export default function Homepage() {
 
     return (
-        <div>
+        <div className={classes.home}>
             <NavHeader />
             <img src={homepageImg} alt="" />
             <p>test homepage</p>

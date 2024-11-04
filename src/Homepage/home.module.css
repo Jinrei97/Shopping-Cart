@@ -1,5 +1,13 @@
-
-img {
-    aspect-ratio: 1/1;
-    width: 100px;
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+    .home {
+        display: flex;
+        flex-direction: column;
+    }
+        img {
+            aspect-ratio: 1/1;
+            width: 300px;
+        }

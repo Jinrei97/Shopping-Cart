@@ -1,0 +1,12 @@
+.navBar {
+    display: flex;
+    justify-content: space-between;
+}
+.link {
+    padding: 1rem 2rem;
+    border: 2px solid black;
+}
+    .link:hover {
+        color: white;
+        background-color: rgb(53, 53, 53);
+    }
