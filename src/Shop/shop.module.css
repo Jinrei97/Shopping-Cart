@@ -9,6 +9,12 @@ body {
         gap: 2rem;
     }
 
+/* header children */
+.displayCounter {
+    margin-left: auto;
+    aspect-ratio: 1/1;
+    text-align: center;
+}
 
 /* ShopCard css */
 .productCard {
@@ -34,6 +40,7 @@ body {
     }
         .buttons > input {
             text-align: center;
+            
             aspect-ratio: 1/1;
             width: 2rem;
         }

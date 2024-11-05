@@ -4,6 +4,7 @@ import NavHeader from "../NavHeader/NavHeader"
 import ShopCard from "./ShopCard";
 
 import classes from './shop.module.css';
+import linkClass from '../NavHeader/navHeader.module.css';
 
 export default function Shop() {
     const [shopCounter, setShopCounter] = useState(0);
@@ -57,9 +58,9 @@ export default function Shop() {
     return (
         <div>
             <NavHeader>
-                <div className="displayCounter">{shopCounter}</div>
+                <div className={classes.displayCounter}>{shopCounter}</div>
                 <Link
-                    className="btnCheckout"
+                    className={linkClass.link}
                     to='/shop/checkout'
                     >Checkout
                 </Link>

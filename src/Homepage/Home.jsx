@@ -1,4 +1,3 @@
-import { useState } from "react";
 import homepageImg from "../assets/HomepageImage.png";
 import NavHeader from "../NavHeader/NavHeader";
 import classes from './home.module.css';
