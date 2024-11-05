@@ -58,7 +58,7 @@ export default function Shop() {
     return (
         <div>
             <NavHeader>
-                <div className={classes.displayCounter}>{shopCounter}</div>
+                <div className={classes.displayCounter}>Cart size: {shopCounter}</div>
                 <Link
                     className={linkClass.link}
                     to='/shop/checkout'

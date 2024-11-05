@@ -11,8 +11,9 @@ body {
 
 /* header children */
 .displayCounter {
+    display: flex;
+    align-items: center;
     margin-left: auto;
-    aspect-ratio: 1/1;
     text-align: center;
 }
 
