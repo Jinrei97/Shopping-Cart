@@ -75,18 +75,20 @@ export default function Shop() {
                 }, [])}
             </div>
 
-            {Array.isArray(products) && 
-                products.map((product) => {
-                    return (
-                        <ShopCard 
-                            key={product.id} 
-                            product={product}
-                            addToCart={(id, count) => addToCart(id, count)} 
-                        />
-                    )
-                })}
-            {loading && <p>Loading shop data</p>}
-            {error && <p>The following error has occurred {error}</p>}
+            <div className={classes.products}>
+                {Array.isArray(products) &&
+                    products.map((product) => {
+                        return (
+                            <ShopCard
+                                key={product.id}
+                                product={product}
+                                addToCart={(id, count) => addToCart(id, count)}
+                            />
+                        )
+                    })}
+                {loading && <p>Loading shop data</p>}
+                {error && <p>The following error has occurred {error}</p>}
+            </div>
         </div>
     )
 }

@@ -1,3 +1,42 @@
+/* Shop css */
 body {
     padding: 1rem;
 }
+    .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        margin-top: 1rem;
+        gap: 2rem;
+    }
+
+
+/* ShopCard css */
+.productCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 3px solid black;
+    padding: 1rem;
+}
+    .productInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+        gap: 1rem;
+    }
+        .productInfo > * {
+            margin: 0;
+        }
+    .buttons {
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 1rem;
+    }
+        .buttons > input {
+            text-align: center;
+            aspect-ratio: 1/1;
+            width: 2rem;
+        }
+        .buttons > button:last-of-type {
+            margin-left: auto;
+        }

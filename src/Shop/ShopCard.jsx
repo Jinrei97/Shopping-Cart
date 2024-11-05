@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState } from "react";
+import classes from './shop.module.css';
 
 export default function ShopCard({ product, addToCart }) {
     const [count, setCount] = useState(0);
@@ -16,13 +17,13 @@ export default function ShopCard({ product, addToCart }) {
     }
 
     return (
-        <div className="card">
-            <div className='productInfo'>
+        <div className={classes.productCard}>
+            <div className={classes.productInfo}>
                 <img src={product.image} alt="" />
                 <h3>{product.title}</h3>
                 <p>{product.description}</p>
             </div>
-            <div className="buttons">
+            <div className={classes.buttons}>
                 <button onClick={() => increaseDecreaseCount('-')}>-</button>
                 <input
                     value={count}
